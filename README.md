@@ -1,4 +1,4 @@
-[Live link](https://github.com/tejajangili21-web/my-project)
+[Live link](https://movieticket.bytexl.live/)
 
 **FlixBus Clone – Bus Ticket Booking Website UI**
 
