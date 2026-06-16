@@ -1,10 +1,7 @@
-# FlixBus Clone Project Overview
-
-## Project Title
+[Live link](https://github.com/tejajangili21-web/my-project)
 
 **FlixBus Clone – Bus Ticket Booking Website UI**
 
-## Project Description
 
 This project is a **frontend clone of the FlixBus website** developed using **HTML and CSS**. It provides a modern and responsive user interface for booking bus tickets online. The website includes a navigation menu, search section, service features, travel information, city listings, and footer links.
 
