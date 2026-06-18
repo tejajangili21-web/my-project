@@ -1,22 +1,29 @@
+/* Reset */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
-body{
-    background:#fff;
+html,body{
+    width:100%;
     overflow-x:hidden;
 }
 
-/* Header */
+img{
+    max-width:100%;
+    height:auto;
+}
 
+/* Header */
 header{
-    background:#3ef50b;
+    background:#00e600;
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
+    padding:15px 5%;
+    flex-wrap:wrap;
 }
 
 .logo{
@@ -25,65 +32,67 @@ header{
 }
 
 nav{
-    margin-left:auto;
     display:flex;
-    gap:20px;
     flex-wrap:wrap;
+    gap:20px;
 }
 
 nav a{
-    color:#222;
     text-decoration:none;
+    color:black;
+    font-size:15px;
 }
 
 /* Hero */
-
 .hero{
     background:
     linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
     url("https://cdn-cf.cms.flixbus.com/drupal-assets/promos/in_hero.webp");
     background-size:cover;
     background-position:center;
-    padding:180px 8% 60px;
+    min-height:550px;
+    padding:150px 5% 50px;
 }
 
 .hero h1{
-    color:#fff;
-    font-size:40px;
-    margin-bottom:20px;
+    color:white;
+    font-size:42px;
+    margin-bottom:25px;
 }
 
+/* Search Box */
 .search-box{
-    background:#fff;
-    padding:20px;
+    background:white;
     border-radius:10px;
+    padding:20px;
     display:flex;
-    gap:10px;
     flex-wrap:wrap;
+    gap:15px;
 }
 
 .search-box div{
+    flex:1 1 180px;
     display:flex;
     flex-direction:column;
 }
 
 .search-box input{
-    width:180px;
+    width:100%;
     padding:12px;
     border:1px solid #ccc;
     border-radius:5px;
 }
 
 .search{
-    background:#12d600;
+    background:#00c853;
+    color:white;
     border:none;
     padding:12px 30px;
-    border-radius:8px;
+    border-radius:5px;
     cursor:pointer;
 }
 
 /* Features */
-
 .features{
     display:flex;
     justify-content:center;
@@ -94,128 +103,94 @@ nav a{
 }
 
 .features div{
-    width:250px;
+    width:300px;
 }
 
-.features h2{
-    font-size:35px;
-    color:#12d600;
-}
-
-.features p{
-    color:#555;
-    margin-top:10px;
+.features h3{
+    margin-bottom:10px;
 }
 
 /* Trusted */
-
 .top{
     text-align:center;
-    padding:40px 20px;
-}
-
-.top h1{
-    font-size:34px;
+    padding:50px 20px;
 }
 
 /* App */
-
 .app{
-    background:#29ce2f;
+    background:#28d13b;
     display:flex;
     justify-content:space-around;
     align-items:center;
-    padding:50px;
+    padding:50px 5%;
     flex-wrap:wrap;
+    gap:30px;
 }
 
-.content h2{
-    font-size:35px;
-    margin-bottom:15px;
+.content{
+    max-width:500px;
 }
 
-.content p{
-    font-size:20px;
-    margin-bottom:15px;
+.phone img{
+    width:250px;
 }
 
 /* Map */
-
 .map{
     width:90%;
     margin:40px auto;
-    background:#dceafa;
+    background:#dcecff;
     border-radius:20px;
     display:flex;
     justify-content:space-around;
     align-items:center;
     padding:30px;
     flex-wrap:wrap;
+    gap:20px;
 }
 
-.map h2{
-    font-size:35px;
-}
-
-.map p{
-    margin:15px 0;
+.maptext{
+    max-width:450px;
 }
 
 .map button{
-    background:#80d900;
+    margin-top:15px;
+    background:#7ed321;
     border:none;
-    padding:15px 30px;
+    padding:12px 25px;
     border-radius:5px;
     cursor:pointer;
 }
 
-.map img{
-    max-width:100%;
-    height:auto;
-}
-
 /* Cities */
-
 .cities{
-    padding:50px 10%;
+    padding:50px 5%;
 }
 
 .cities h2{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 .tabs{
     text-align:center;
-    border-bottom:1px solid #ccc;
-    padding-bottom:10px;
+    margin-bottom:30px;
 }
 
 .tabs span{
     margin:0 15px;
 }
 
-.tabs .active{
-    border-bottom:3px solid #80d900;
-    padding-bottom:10px;
-}
-
 .city-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:30px;
-    margin-top:40px;
-}
-
-.city-grid p{
-    margin-bottom:12px;
 }
 
 /* Footer */
-
 footer{
+    padding:50px 5%;
     border-top:1px solid #ddd;
-    padding:50px 10%;
 }
 
 .footer-grid{
@@ -229,23 +204,16 @@ footer{
 }
 
 .footer-grid p{
-    margin:10px 0;
-    color:#555;
+    margin:8px 0;
 }
 
 /* Tablet */
-
-@media(max-width:992px){
-
-    header{
-        flex-direction:column;
-        gap:15px;
-        padding:20px;
-    }
+@media (max-width:992px){
 
     nav{
         justify-content:center;
-        margin-left:0;
+        width:100%;
+        margin-top:15px;
     }
 
     .city-grid{
@@ -255,11 +223,28 @@ footer{
     .footer-grid{
         grid-template-columns:repeat(2,1fr);
     }
+
+    .hero h1{
+        font-size:34px;
+    }
 }
 
 /* Mobile */
+@media (max-width:768px){
 
-@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero{
+        padding:120px 20px 40px;
+    }
 
     .hero h1{
         font-size:28px;
@@ -270,12 +255,13 @@ footer{
         flex-direction:column;
     }
 
-    .search-box input{
+    .search{
         width:100%;
     }
 
-    .search{
-        width:100%;
+    .features{
+        flex-direction:column;
+        align-items:center;
     }
 
     .app{
@@ -295,23 +281,27 @@ footer{
         grid-template-columns:1fr;
         text-align:center;
     }
+
+    .phone img{
+        width:180px;
+    }
 }
 
 /* Small Mobile */
-
-@media(max-width:480px){
-
-    .hero{
-        padding:120px 15px 40px;
-    }
+@media (max-width:480px){
 
     .hero h1{
         font-size:22px;
     }
 
+    .top h1,
     .content h2,
-    .map h2,
-    .top h1{
-        font-size:24px;
+    .map h2{
+        font-size:22px;
+    }
+
+    .cities,
+    footer{
+        padding:30px 20px;
     }
 }
